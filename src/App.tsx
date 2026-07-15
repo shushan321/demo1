@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import VenueDetail from './pages/VenueDetail';
 import Payment from './pages/Payment';
@@ -9,7 +9,7 @@ import BottomNav from './components/BottomNav';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/venue/:id" element={<VenueDetail />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/timer" element={<Timer />} />
       </Routes>
       <BottomNav />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
